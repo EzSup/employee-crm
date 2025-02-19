@@ -1,0 +1,26 @@
+.nav-item {
+	margin: 5px;
+	display: flex;
+	align-items: center;
+	padding: 12px 24px;
+	color: #333333;
+	text-decoration: none;
+	border-radius: 4px;
+	cursor: pointer;
+
+	svg {
+		margin: 3px;
+	}
+}
+.nav-item:hover {
+	background-color: #f3f6ff;
+}
+
+.nav-item.active {
+	background-color: #f8f9ff;
+	color: #1976d2;
+}
+
+.nav-item.warned {
+	color: #e84b18;
+}

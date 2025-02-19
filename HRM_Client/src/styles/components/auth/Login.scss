@@ -1,0 +1,83 @@
+@use "/src/styles/globals/fonts.scss";
+$form-bg-color: #ffffff;
+$primary-text-color: #1976d2;
+$form-text-color: #474747;
+$button-bg-color: #8e95b2;
+$button-hovered-bg-color: #9e9e9e;
+$button-disabled-gb-color: #c7cad9;
+
+$text-on-image-color: #ffffff;
+
+.login-container {
+  font-weight: 400;
+  display: flex;
+  width: 800px;
+  height: 500px;
+  margin: auto;
+  background-color: $form-bg-color;
+  color: $form-text-color;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+  h2 {
+    color: $primary-text-color;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .login-form {
+    width: 50%;
+    padding: 40px;
+    background-color: $form-bg-color;
+
+    .login-button {
+      width: 100px;
+      padding: 12px;
+      background-color: $button-bg-color;
+      text-transform: none;
+      color: $form-bg-color;
+      border: none;
+      border-radius: 5px;
+      display: flex;
+      margin: auto;
+      margin-top: 40px;
+      justify-content: center;
+      font-size: 18px;
+
+      &:not([disabled]):hover {
+        background-color: $button-disabled-gb-color;
+        cursor: pointer;
+      }
+
+      &:is([disabled]) {
+        cursor: not-allowed;
+        background-color: $button-hovered-bg-color;
+      }
+    }
+  }
+  .login-image {
+    width: 50%;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $text-on-image-color;
+
+    img {
+      width: 60%;
+      margin-bottom: 20px;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 200;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+@use "/src/styles/globals/fonts.scss";
+
+$background-color: #ececec;
+$primary-button-bg-color: #ef815d;
+$primary-button-fg-color: #ffffff;
+$secondary-button-bg-color: #8e95b2;
+$shadow-color: #0047ff1a;
+$common-shadow: 0px 2px 4px $shadow-color;
+
+body {
+	margin: 0;
+	font-family: fonts.$main-font;
+	background-color: $background-color;
+}
+
+button {
+	font-family: fonts.$main-font !important;
+	min-height: 37px !important;
+	padding: 0 10px !important;
+	border: none !important;
+	border-radius: 4px !important;
+	cursor: pointer !important;
+}
+
+.primary-button {
+	background-color: $primary-button-bg-color !important;
+	color: $primary-button-fg-color !important;
+}
+
+.secondary-button {
+	background-color: $secondary-button-bg-color !important;
+	color: $primary-button-fg-color !important;
+}
+
+.page {
+	margin: 10px;
+}

@@ -1,0 +1,37 @@
+.dashboard-container {
+	position: relative; /* Важливо для позиціонування псевдоелемента */
+	background-color: #f3f3f3;
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+	> * {
+		z-index: 0;
+	}
+}
+
+.dashboard-container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 144px;
+	background: url("./../../../assets/dashboard-bg.png");
+	background-position: bottom;
+}
+
+.create-announcement-btn {
+	background: none;
+	border: dashed #1976d2 1px !important;
+	border-radius: 16px !important;
+	text-transform: none !important;
+	vertical-align: middle;
+	display: flex;
+	place-items: center;
+	padding: 5px;
+	font-size: 14px;
+	font-weight: 400;
+	text-align: center;
+	color: #1976d2;
+	cursor: pointer;
+}

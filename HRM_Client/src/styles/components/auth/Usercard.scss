@@ -1,0 +1,13 @@
+@use "../../globals/fonts.scss";
+
+.user-card {
+	display: grid;
+	font-family: "Montserrat", sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+
+	.undertext {
+		font-size: 12px;
+		color: #a3adbb;
+	}
+}

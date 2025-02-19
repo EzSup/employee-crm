@@ -1,0 +1,13 @@
+.chip-input {
+	display: inline-flex;
+	border: dashed #1976d2 1px;
+	padding-left: 10px;
+	border-radius: 20px;
+	width: max-content;
+	input {
+		width: 70px;
+		border: none;
+		border-radius: 10px;
+		outline: none;
+	}
+}

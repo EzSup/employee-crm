@@ -1,0 +1,35 @@
+h6 {
+	font-weight: 400 !important;
+	margin-bottom: 4px !important;
+}
+
+.control-buttons-section {
+	vertical-align: middle;
+	display: flex;
+
+	> button {
+		margin: auto 10px;
+	}
+}
+
+.person-photo-files-card {
+	display: inline-flex;
+	justify-content: space-between;
+	margin: 10px 0;
+
+	.files-button {
+		font-family: "Inter", sans-serif;
+		font-weight: 400;
+		margin: 0px;
+		padding: 6px 12px;
+		color: #fff;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		height: 36px;
+	}
+}
+.person-img {
+	border-radius: 8px;
+	width: 100%;
+}

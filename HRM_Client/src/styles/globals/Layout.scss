@@ -1,0 +1,48 @@
+@use "/src/styles/globals/fonts.scss";
+
+$background-color: #ffffff;
+$border-color: #4b5563;
+
+.dashboard {
+	background-color: $background-color;
+	font-family: fonts.$main-font;
+	display: flex;
+	min-height: 100vh;
+
+	.header {
+		position: fixed;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 62px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		> * {
+			margin: 20px;
+		}
+
+		.logo-image {
+			height: 28px;
+		}
+	}
+
+	.sidebar {
+		width: 220px;
+		padding-top: 62px;
+
+		.nav-menu {
+			display: flex;
+			flex-direction: column;
+			height: calc(100% - 80px);
+			padding: 20px 0px;
+			gap: 8px;
+		}
+	}
+
+	.main-content {
+		flex: 1;
+		margin-top: 70px;
+	}
+}

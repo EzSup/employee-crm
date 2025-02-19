@@ -1,0 +1,42 @@
+@use "../../globals/App.scss";
+@use "../../globals/fonts.scss";
+
+$bg-color: #ffffff;
+$border-color: #8e95b2;
+
+.field-selector {
+	display: flex;
+	flex-direction: column;
+	z-index: 3;
+	width: 200px;
+	height: 300px;
+	background-color: $bg-color;
+	padding: 10px 0px;
+	border: solid $border-color 1px;
+	border-radius: 4px;
+	gap: 8px;
+
+	button {
+		margin: auto 10px 4px 10px;
+	}
+
+	h3 {
+		margin: 0px 8px;
+		font-size: 18px;
+		font-weight: 400;
+	}
+
+	.fields-container {
+		overflow: scroll;
+		display: inline-grid;
+	}
+	.options-container {
+		display: inline-grid;
+		padding: 0px 8px;
+		display: none;
+
+		.option {
+			margin: 5px 0;
+		}
+	}
+}

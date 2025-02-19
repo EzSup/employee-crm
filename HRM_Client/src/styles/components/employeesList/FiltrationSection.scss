@@ -1,0 +1,30 @@
+@use "../../globals/App.scss";
+
+.filtration-section {
+	background-color: white;
+	display: inline-grid;
+
+	.show-hide-button {
+		transition: all 0.2s;
+		border: none;
+		background: none;
+		margin-right: 14px;
+	}
+	.button-active {
+		transform: rotate(180deg);
+	}
+
+	.container-active {
+		display: inline-grid !important;
+	}
+
+	.filtration-section-title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		cursor: alias;
+		box-shadow: App.$common-shadow;
+		background-color: #f8f9ff;
+		padding: 4px 10px;
+	}
+}

@@ -1,0 +1,32 @@
+$primary-color: #f8f9ff;
+$secondary-color: #8e95b2;
+
+.search-component {
+	height: 36px;
+	display: flex;
+
+	input {
+		width: 400px;
+		min-width: 150px;
+		border: none;
+		outline: none;
+		background-color: $primary-color;
+		padding: 10px;
+		font-size: 14px;
+		border-top-left-radius: 12px;
+		border-bottom-left-radius: 12px;
+	}
+	input::placeholder {
+		color: $secondary-color;
+	}
+	button {
+		width: 48px;
+		color: $primary-color;
+		background-color: $secondary-color;
+		border: none;
+		border-top-right-radius: 12px;
+		border-bottom-right-radius: 12px;
+		padding: 10px;
+		cursor: pointer;
+	}
+}

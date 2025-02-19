@@ -1,0 +1,55 @@
+@use "../../globals/fonts.scss";
+@use "./Login.scss";
+$error-red-color: #e84b18;
+$placeholder-text-color: #a8a8a8;
+
+.input-group {
+	margin-bottom: 20px;
+
+	.error-color-text {
+		color: $error-red-color;
+	}
+
+	.field-with-error {
+		border: solid 1.5px $error-red-color;
+	}
+
+	label {
+		display: block;
+		font-size: 18px;
+		color: Login.$form-text-color;
+		margin-bottom: 8px;
+	}
+
+	input {
+		font-family: fonts.$main-font;
+		color: Login.$form-text-color;
+		width: 100%;
+		height: 26px;
+		padding: 12px;
+		font-size: 18px;
+	}
+
+	.field-error-message {
+		font-style: "italic";
+		font-weight: 300;
+		margin-top: 0.1em;
+		color: $error-red-color;
+	}
+}
+.password-wrapper {
+	position: relative;
+
+	.toggle-password {
+		color: Login.$form-text-color;
+		position: absolute;
+		top: 25px;
+		right: 0px;
+		transform: translateY(-50%);
+		background: transparent;
+		border: none;
+		cursor: pointer;
+		width: 20px;
+		height: 50px;
+	}
+}

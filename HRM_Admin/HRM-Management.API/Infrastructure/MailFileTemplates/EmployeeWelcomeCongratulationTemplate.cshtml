@@ -1,0 +1,70 @@
+@model HRM_Management.Core.DTOs.EmployeeDtos.EmployeeWelcomeCongratulationDto
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            margin: 0;
+            padding: 0;
+            color: #ffffff;
+        }
+
+        .container {
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card {
+            background-color: #1e1e2f;
+            border: 2px solid #1e88e5;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #1e88e5;
+        }
+
+        h1 {
+            color: #1e88e5;
+        }
+
+        p {
+            font-size: 14px;
+            color: #d1d5db;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #1e88e5;
+            color: #ffffff;
+            padding: 5px 10px;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <img src="@Model.EmployeePersonalPhotoLink" alt="Employee Photo" />
+        <h1>WELCOME ABOARD!</h1>
+        <p>@Model.CongratulationMessagePrompt</p>
+        <p>Likes: @Model.Hobbies</p>
+        <p>Specializes in @Model.TechStack </p>
+        <span class="badge">  ✋</span>
+    </div>
+</div>
+</body>
+</html>

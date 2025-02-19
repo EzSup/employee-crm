@@ -1,0 +1,8 @@
+@use "../globals/App.scss";
+
+.all-filters-container {
+	position: absolute;
+	margin-left: 300px;
+	z-index: 3;
+	display: flex;
+}

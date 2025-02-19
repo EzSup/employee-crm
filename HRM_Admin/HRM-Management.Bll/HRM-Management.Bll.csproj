@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace>HRM_Management.Bll</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+
+        <PackageReference Include="AutoMapper" Version="13.0.1"/>
+        <PackageReference Include="EPPlus" Version="7.5.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\HRM-Management.Core\HRM-Management.Core.csproj"/>
+        <ProjectReference Include="..\HRM-Management.Dal\HRM-Management.Dal.csproj"/>
+        <ProjectReference Include="..\HRM-Management.Infrastructure\HRM-Management.Infrastructure.csproj"/>
+    </ItemGroup>
+
+</Project>

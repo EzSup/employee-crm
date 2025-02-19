@@ -1,0 +1,154 @@
+@using HRM_Management.Core.Helpers
+@model IEnumerable<HRM_Management.Core.DTOs.EmployeeDtos.EmployeeBirthdayCongratulationMessageDto>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+        body {
+          font-family: "Montserrat", sans-serif;
+          background-color: #0d1117;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          color: #ffffff;
+          padding-top: 10px;
+        }
+
+        p {
+          font-size: 0.9rem;
+          margin: 10px auto;
+          display: flex;
+          line-height: 1.5;
+          color: #ffffff;
+          text-align: center;
+        }
+
+        .card {
+          display: flex;
+          flex-direction: row;
+          background-color: #1e1e2f;
+          border: 2px solid #1e88e5;
+          border-radius: 16px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+          max-width: 800px;
+          width: 90%;
+          padding: 20px;
+          text-align: left;
+          margin-bottom: 20px;
+        }
+
+        .card img {
+          width: 200px;
+          height: auto;
+          border-radius: 0;
+          border: 10px solid #ffffff;
+          border-bottom: 20px solid #ffffff;
+          margin-right: 20px;
+        }
+
+        .card-content {
+          flex: 1;
+          text-align: center;
+        }
+
+        .card-content h1 {
+          font-size: 2.5rem;
+          margin: 0 0 10px;
+          color: #1e88e5;
+          text-shadow: 0 0 10px #1e88e5 !important;
+        }
+
+        .card-content h1 * {
+          background-color: transparent !important;
+          color: #1e88e5 !important;
+        }
+
+        .card-content h2 {
+          font-size: 2rem;
+          margin: 10px 0;
+          color: #ffffff;
+        }
+
+        .card-content p {
+          font-size: 1.4rem;
+          margin: 10px auto;
+          line-height: 1.5;
+          color: #d1d5db;
+        }
+
+        .stickers {
+          display: flex;
+          justify-content: start;
+          flex-wrap: wrap;
+          gap: 10px;
+          margin-top: 20px;
+        }
+
+        .stickers img {
+          width: 50px;
+          height: 50px;
+        }
+
+        @@media (max-width: 767px) {
+          .card {
+            flex-direction: column;
+            text-align: center;
+          }
+  
+          .card img {
+            margin: 0 auto 20px;
+          }
+  
+          .card-content {
+            text-align: center;
+          }
+  
+          .card-content h1 {
+            font-size: 1.5rem;
+          }
+  
+          .card-content h2 {
+            font-size: 1.2rem;
+          }
+  
+          .card-content p {
+            display: flex;
+            margin: 0 auto;
+            font-size: 1.2rem;
+          }
+  
+          .stickers {
+            justify-content: center;
+          }
+  
+          .stickers img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+    </style>
+</head>
+<body>
+@foreach (var employee in Model)
+{
+    <div class="card">
+        <img src="@employee.EmployeePersonalPhotoLink"/>
+        <div class="card-content">
+            <h1>Happy Birthday!</h1>
+            <h2>@DtoPropertiesHelper.UniteFirstAndLastName(employee.FirstName, employee.LastName)</h2>
+            <p>
+                @employee.CongratulationMessagePrompt
+            </p>
+        </div>
+    </div>
+}
+<p>Join us in wishing @DtoPropertiesHelper.WriteNamesInAList(Model.Select(x => x.FirstName).ToArray()) much happiness on his special day by contacting him privately and sending him a personal message!</p>
+</body>
+</html>

@@ -1,0 +1,39 @@
+@use "../../globals/App.scss";
+
+$bg-color: #ffffff;
+$fg-color: #474747;
+$action-active-color: #8e95b2;
+
+.tools-bar {
+	display: flex;
+	width: 100%;
+	height: 40px;
+	margin-bottom: 10px;
+
+	> * {
+		margin: 0 5px;
+	}
+
+	.filter-button {
+		width: 40px;
+		height: 34px;
+		background-color: $bg-color;
+		color: $fg-color;
+		border-radius: 4px;
+		padding: 7px 10px;
+		border: none;
+		box-shadow: App.$common-shadow;
+		cursor: pointer;
+	}
+
+	.actions-bar {
+		display: flex;
+		width: 100%;
+		justify-content: flex-end;
+
+		> * {
+			color: $action-active-color;
+			margin: auto 5px;
+		}
+	}
+}

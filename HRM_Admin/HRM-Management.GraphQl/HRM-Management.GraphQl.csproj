@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <RootNamespace>HRM_Management.GraphQl</RootNamespace>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="HotChocolate.AspNetCore" Version="14.3.0"/>
+        <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="14.3.0"/>
+        <PackageReference Include="HotChocolate.Data" Version="14.3.0"/>
+        <PackageReference Include="HotChocolate.Data.EntityFramework" Version="14.3.0"/>
+        <PackageReference Include="HotChocolate.Execution" Version="14.3.0"/>
+        <PackageReference Include="HotChocolate.Types" Version="14.3.0"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.2"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\HRM-Management.Core\HRM-Management.Core.csproj"/>
+        <ProjectReference Include="..\HRM-Management.Dal\HRM-Management.Dal.csproj"/>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,33 @@
+.gender-switch {
+	margin: 0 !important;
+
+	button {
+		width: 36px;
+		height: 36px;
+		background-color: #f6f6f6;
+		color: #a8a8a8;
+		border-radius: 0;
+		margin: 0px;
+	}
+	.left {
+		border-top-left-radius: 10px !important;
+		border-bottom-left-radius: 10px !important;
+		border-top-right-radius: 0px !important;
+		border-bottom-right-radius: 0px !important;
+		&.selected {
+			background-color: #96c0ff;
+			color: #ffffff;
+		}
+	}
+	.right {
+		border-top-left-radius: 0px !important;
+		border-bottom-left-radius: 0px !important;
+		border-top-right-radius: 10px !important;
+		border-bottom-right-radius: 10px !important;
+
+		&.selected {
+			background-color: #ffb5b5;
+			color: #ffffff;
+		}
+	}
+}

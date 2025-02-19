@@ -1,0 +1,78 @@
+﻿@model IEnumerable<HRM_Management.Core.DTOs.ChildDtos.ChildrenBirthdayNotificationResponse>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Children Notifications</title>
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #283593; 
+            color: #ffffff; 
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 20px;
+            background: #f3f4f6; 
+            border-radius: 12px;
+            box-shadow: 0 4px 10px #1a237e; 
+        }
+        h1 {
+            text-align: center;
+            color: #3949ab; 
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table th, table td {
+            border: 1px solid #d1d9ff; 
+            padding: 12px;
+            text-align: left;
+        }
+        table th {
+            background-color: #3f51b5; 
+            color: #ffffff; 
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+        table td {
+            background-color: #e8eaf6;
+            color: #1a237e; 
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Child Notifications</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Birth Date</th>
+            <th>Parent Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var child in Model)
+        {
+            <tr>
+                <td>@child.Id</td>
+                <td>@child.Name</td>
+                <td>@child.BirthDate.ToString("dd-MM-yyyy")</td>
+                <td>@(string.IsNullOrEmpty(child.ParentName) ? "N/A" : child.ParentName)</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

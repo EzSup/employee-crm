@@ -1,0 +1,25 @@
+.user-cell {
+	display: inline-flex;
+	line-height: 1.1em;
+	padding: 5px;
+
+	.names-labels {
+		padding: 5px;
+		display: grid;
+
+		.main-line {
+			font-size: 17px;
+		}
+		.secondary-line {
+			color: #3333336b;
+			font-size: 14px;
+		}
+	}
+
+	.profilePic {
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+}
